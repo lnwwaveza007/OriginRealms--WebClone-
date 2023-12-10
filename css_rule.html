@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/css_rule.css">
+    <title>CSS Rule</title>
+</head>
+<body>
+    <section style="display:flex; justify-content: center; align-items: center; flex-direction: column;">
+        <h1>Hello World</h1>
+    </section>
+    <section class="explain-item">
+        <h2>[ first-child ]</h2>
+        <p>เป็น CSS Selector ที่ใช้ในการเลือกลูกตำแหน่งแรกของตัว Element นั้นๆ</p>
+        <pre style="border-radius: 10px ; padding: 3%; background-color: gray;">&lt;div&gt;<br>&emsp;&lt;p&gt;Hello World&lt;/p&gt<br>&emsp;&lt;p&gt;Hey this is two line&lt;/p&gt<br>&lt;/div&gt;</pre>
+        <p>จาก html ด้านบนถ้าเราต้องการเลือก p ตัวที่แรกเราก็จะใช้คำสั่งดังต่อไปนี้ได้เลย</p>
+        <pre style="display: flex; justify-content: center;">div p:first-child { }</pre>
+        <br><hr>
+    </section>
+    <section class="explain-item">
+        <h2>[ nth-child() ]</h2>
+        <p>เป็น CSS Selector ที่ใช้ในการเลือกลูกตำแหน่งที่ n ของตัว Element นั้นๆ</p>
+        <pre style="border-radius: 10px ; padding: 3%; background-color: gray;">&lt;div&gt;<br>&emsp;&lt;p&gt;Hello World&lt;/p&gt<br>&emsp;&lt;p&gt;Hey this is two line&lt;/p&gt<br>&lt;/div&gt;</pre>
+        <p>จาก html ด้านบนถ้าเราต้องการเลือก p ตัวที่สองเราก็จะใช้คำสั่งดังต่อไปนี้ได้เลย</p>
+        <pre style="display: flex; justify-content: center;">div p:nth-child(2) { }</pre>
+        <br><hr>
+    </section>
+    <section class="explain-item">
+        <h2>[ transition ]</h2>
+        <p>เป็น Property ที่จะทำการทำให้การเปลี่ยน Property อื่นๆ เกิดขึ้นอย่างช้าๆ เป็น Animation หรือเป็นการเพิ่ม transition ให้ตัว Element นั่นเอง
+            โดยการใช้งานจะต้องใช้งานเป็นดังนี้
+        </p>
+        <div class="code">
+            <pre>transition: property-name time speed-curve</pre>
+        </div>
+        <p>อธิบาย Parameters ต่างๆ ดังนี้</p>
+        <ul>
+            <li>Property-name : คือชื่อของ Property ที่เราต้องการใส่ Transition ลงไป</li>
+            <li>Time : คือระยะเวลาว่าจะให้เกิด Transition นานแค่ไหน</li>
+            <li>Speed-Curve : คือ Preset ที่จะเป็นเหมือนรูปแบบการเล่นของอนิเมชั่น เช่น<ul>
+                <li>ease : เริ่มต้นช้ากลางเร็วและปลายช้า</li>
+                <li>linear : ไม่มีการเปลี่ยนแปลงความเร็ว</li>
+                <li>ease-in : เริ่มต้นช้า</li>
+                <li>ease-out : จบช้า</li>
+                <li>ease-in-out : ช้าในตอนเริ่มต้นและตอนจบ</li>
+            </ul></li>
+        </ul>
+        <h3>Example of use</h3>
+        <div id="trans-exam" style="display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 10px;">
+            <pre>transition: background-color 0.5s ease-in;</pre>
+            <a>Hover Me without transition :(</a>
+            <a>Hover Me with transition :)</a>
+        </div>
+        <br><hr>
+    </section>
+    <section class="explain-item">
+        <h2>[ cursor ]</h2>
+        <p>ใช้เพื่อทำการปรับเปลี่ยนรูปแบบของ mouse เมื่อไป Hover ที่ element นั้นๆ</p>
+        <div class="code">
+            <pre>cursor: value;</pre>
+        </div>
+        <p>โดยตัว Value คือ รูปแบบเมาส์ที่จะเปลี่ยนไปซึ่งจะมีเยอะมากๆ ดังนั้นเราขอแนบเป็นลิ้งไว้แทนการเขียนทั้งหมด <a style="color: white; text-decoration: underline; font-weight: bold;" href="https://www.w3schools.com/cssref/pr_class_cursor.php">Ref</a></p>
+        <h3>Example of use</h3>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <pre>cursor: all-scroll;</pre>
+            <div style="padding: 3%; background-color: yellowgreen; border-radius: 10px; cursor: all-scroll;">Hello World</div>
+        </div>
+        <br><hr>
+    </section>
+    <section class="explain-item">
+        <h2>[ transform ]</h2>
+        <p>ใช้ในการเปลี่ยนแปลง element นั้นๆ ทั้งในระบบ 2 มิติ และ 3 มิติ เช่น การหมุน Scale</p>
+        <div class="code">
+            <pre>transform: none|transform-functions|initial|inherit;</pre>
+        </div>
+        <p>โดยตัว transform-functions มีหลายตัวมากๆ ดังนั้นเราขอแนบเป็นลิ้งไว้แทนการเขียนทั้งหมด <a style="color: white; text-decoration: underline; font-weight: bold;" href="https://www.w3schools.com/cssref/css3_pr_transform.php">Ref</a></p>
+        <h3>Example of use</h3>
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+            <pre>transform: rotation(45deg)</pre>
+            <div style="margin-top: 5%;padding: 3%; background-color: blueviolet; border-radius: 10px; transform: rotate(45deg);">Ops Rotated</div>
+        </div>
+        <br><hr>
+    </section>
+</body>
+</html>

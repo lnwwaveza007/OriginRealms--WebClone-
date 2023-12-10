@@ -1,0 +1,129 @@
+/* Setup hr line to new color and add margin top and bottom */
+
+hr {
+    border-color: rgb(24 26 27);
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+/* Setting img inside blog */
+
+.content-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-img img {
+    border-radius: 10px;
+}
+
+.content-img p {
+    color: #9ca3af;
+    font-size: 0.95rem;
+}
+
+/* Settings content section */
+
+.content-section {
+    padding-left: 17%;
+    padding-right: 17%;
+    color: #d1d5db;
+}
+
+.content-section h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 2%;
+    color: white;
+}
+
+.content-section li {
+    margin-bottom: 2%;
+}
+
+/* More Section */
+
+.more {
+    background-color: rgb(232 224 204);
+    padding: 2%;
+    border-radius: 10px;
+    color: black;
+}
+
+.more-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3%;
+}
+
+.more-flex div {
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.more-flex div:hover {
+    transform: scale(0.98);
+}
+
+@media (max-width: 1240px) {
+    /* Remove padding content */
+
+    .content-page {
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+
+    /* Change h2 font size */
+
+    h2 {
+        font-size: 1.1rem !important;
+    }
+
+    /* Change margin left and right for more section */
+
+    .more {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    /* Change padding content */
+
+    .content-section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    /* Change flex-warp of more make it's show like columns */
+
+    .more-flex {
+        flex-wrap: wrap;
+    }
+
+    .more {
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    /* Change h2 font size */
+
+    h2 {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 320px) {
+
+    /* Change h2 font size */
+
+    h2 {
+        font-size: 0.8rem !important;
+    }
+}

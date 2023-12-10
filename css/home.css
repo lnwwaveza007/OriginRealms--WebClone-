@@ -1,0 +1,322 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.bg {
+    display: flex;
+}
+
+/* News section */
+
+.news {
+    margin-top: 30px;
+    padding-left: 10%;
+    padding-right: 10%;
+    gap: 30px;
+    margin-bottom: 60px;
+    cursor: pointer;
+    flex: 1 1 0px;
+}
+
+.news div:first-child {
+    transition: transform 0.2s ease-in-out;
+}
+
+.news:hover div:first-child {
+    transform: scale(0.98);
+}
+
+section h1,
+section p {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+section p {
+    color: gray;
+}
+
+/* View blogs button */
+
+#view-blogs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+#view-blogs a {
+    background-color: rgb(234 162 26);
+    color: rgb(124 45 18);
+    padding: 12px 18px;
+    border-radius: 10px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#view-blogs a:hover {
+    background-color: rgb(250 192 33) !important;
+}
+
+/* Meet the team section */
+
+.meet-the-team-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 80px;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+
+.meet-the-team {
+    display: grid;
+    grid-template:
+        "header display" 0.5fr
+        "team display" 2fr
+        "footer display" 0.5fr / 2fr 1fr;
+    background-color: rgb(232 224 204);
+    border-radius: 10px;
+    border-bottom: rgb(249 115 22) 5px solid;
+}
+
+.mtt-header {
+    padding-top: 15px;
+    padding-left: 30px;
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.mtt-display {
+    grid-area: display;
+    background-image: url(../assets/main/Clx.png);
+    background-size: 120%;
+    background-position: -10px -75px;
+}
+
+.mtt-team {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 10px;
+    grid-area: team;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-weight: 500;
+}
+
+.mtt-footer {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.mtt-footer svg {
+    width: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    fill: black;
+    flex-shrink: 0;
+}
+
+.mtt-footer .character {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+/* Social Section */
+
+.social {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 80px;
+}
+
+.social-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.social a {
+    margin-top: 30px;
+    font-size: 1.2em;
+    padding: 8px 16px;
+    background-color: rgb(88 101 242);
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.social a:hover {
+    background-color: rgb(103 115 244) !important;
+}
+
+@media (max-width: 1440px) {
+    /* Make the display image full */
+    .mtt-display {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 35%;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    /* Disable content-page padding  */
+
+    .content-page {
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+}
+
+@media (max-width: 600px) {
+    /* Background size change */
+
+    .bg {
+        height: 300px !important;
+    }
+
+    /* News section */
+    
+    .news {
+        flex-wrap: wrap !important;
+    }
+    .news div {
+        width: auto !important;
+    }
+
+    /* Meet the team section */
+
+    .mtt-team {
+        width: auto !important;
+    }
+
+    .meet-the-team-section {
+        width: auto;
+    }
+
+    .meet-the-team {
+        display: flex;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    .mtt-footer {
+        display: flex;
+        overflow: hidden;
+    }
+
+    .character {
+        grid-template-columns: repeat(5, 1fr) !important;
+        overflow: hidden;
+    }
+
+    .character> :nth-child(n+6) {
+        display: none;
+    }
+
+    .mtt-header {
+        padding-right: 3%;
+    }
+
+    .mtt-team * {
+        width: auto !important;
+    }
+
+    .mtt-team div:nth-child(1) {
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-self: center;
+        gap: 0px !important;
+        margin-bottom: 0px !important;
+    }
+
+    .mtt-team div:nth-child(1) p {
+        margin-top: -10px !important;
+    }
+
+    .mtt-team div:nth-child(2) p {
+        padding-right: 5% !important;
+    }
+
+    /* Social Section */
+
+    .social {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .social div {
+        width: auto !important;
+    }
+
+    .social-text {
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    /* Setting all font in the page make it's smaller */
+    
+    p {
+        font-size: 0.8em !important;
+    }
+
+    .feedback p {
+        font-size: 1em !important;
+    }
+}
+
+@media (max-width: 375px) {
+    /* Size down the grid to show only 4 slot */
+    .character {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    /* Hide all child above the 4 child  */
+
+    .character> :nth-child(n+5) {
+        display: none !important;
+    }
+}
+
+@media (max-width: 320px) {
+
+    /* Size down the grid to show only 3 slot */
+
+    .character {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    /* Hide all child above the 3 child  */
+
+    .character> :nth-child(n+4) {
+        display: none !important;
+    }
+}

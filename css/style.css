@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+html,
+body { 
+    overflow-x: hidden;
+    /* Fix the unknow space on the x axis */
+}
+
+.font-proxima {
+    font-family: 'Montserrat', sans-serif !important;
+    /* The main font that use in this website */
+}
+
+/* Setup for header and nav */
+
+header#nav {
+    display: flex;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.nav {
+    width: 100%;
+    position: relative;
+    background-color: black;
+    display: flex;
+    padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 5%;
+}
+
+.nav a {
+    color: white;
+    font-family: proxima-nova, sans-serif;
+    font-size: 1.125rem;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+/* Setting the right section of nav bar */
+
+.nav .right {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .right p {
+    display: inline;
+}
+
+.nav .right .discord {
+    padding: 8px 16px;
+    background-color: rgb(88 101 242);
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.discord:hover {
+    background-color: rgb(103 115 244) !important;
+}
+
+#ip-server a {
+    color: rgb(124 45 18);
+}
+
+#ip-server p {
+    opacity: 0.75;
+}
+
+#ip-server {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    background-color: rgb(234 162 26);
+    color: rgb(124 45 18);
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+#ip-server:hover {
+    background-color: rgb(250 192 33) !important;
+}
+
+#selected {
+    background-color: rgb(59 130 246);
+    border-radius: 10px;
+}
+
+/* Setup utility class for using */
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Setup hamburger for nav menu */
+
+.hamburger {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.nav-mobile {
+    font-size: 1.3rem;
+    font-weight: 800;
+    display: none;
+}
+
+/* Css for body section */
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+.content-page {
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+/* Setting for footer */
+
+.footer-space {
+    padding-left: 12%;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    width: 70%;
+    background-color: rgb(234 162 26);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.footer-bottom {
+    width: 70%;
+    background-color: rgb(250 192 33);
+    color: black;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.footer>div div:nth-child(2) svg {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.footer>div div:nth-child(2) svg:hover {
+    opacity: 1;
+}
+
+.ip-server {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.ip-server a,
+.ip-server p {
+    background-color: rgb(214 133 18);
+    padding: 8px 16px;
+    color: rgb(124, 45, 18);
+    font-weight: 800;
+    border-radius: 10px;
+}
+
+.footer-bottom div p:nth-child(2) {
+    color: rgb(124 45 18);
+}
+
+/* Pistol icon on the left */
+
+.pistol {
+    position: absolute;
+}
+
+.nav .left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav .left a {
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    padding: 16px 16px;
+}
+
+.nav .left a:hover {
+    background-color: rgb(59 130 246);
+}
+
+/* Feedback bottom at the right side */
+
+.feedback {
+    z-index: 100000;
+    position: fixed;
+    right: -2%;
+    top: 45%;
+    transform: rotate(-90deg);
+    margin: 0;
+    font-weight: 800;
+}
+
+.feedback div {
+    padding: 8px 16px;
+    border-radius: 10px;
+    background-color: rgb(59 130 246);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.feedback a:hover div {
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+/* Reponsive */
+
+@media (max-width: 1440px) {
+
+    .feedback {
+        right: -3% !important;
+    }
+
+    .nav {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+
+    .footer,
+    .footer-bottom {
+        margin-left: 15% !important;
+        margin-right: 15% !important;
+    }
+
+    .footer-space {
+        padding-left: 15% !important;
+    }
+
+    .pistol {
+        left: 17.5% !important;
+    }
+
+    .pistol-base {
+        padding-top: 4.5% !important;
+    }
+
+    .pistol-neck {
+        margin-left: 2.3% !important;
+        padding-top: 5% !important;
+    }
+}
+
+@media (max-width: 1025px) {
+    header {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    /* Pistol css */
+
+    .pistol {
+        left: 10% !important;
+        padding-top: 1.6% !important;
+        z-index: 10
+    }
+
+    .pistol-neck {
+        left: 10.8% !important;
+        padding-top: 6.5% !important;
+        z-index: 8
+    }
+
+    .pistol-base {
+        left: 10%    !important;
+        padding-top: 6% !important;
+        z-index: 8
+    }
+
+     /* Footer */
+
+    .footer-space {
+        padding-left: 19% !important;
+    }
+
+    .footer,
+    .footer-bottom {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        width: 90% !important;
+    }
+
+    /* Feedback bottom */
+
+    .feedback {
+        right: -4% !important;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    /* Disable nav bar for desktop and turn on the mobile */
+
+    #nav .nav {
+        display: none;
+    }
+
+    .nav-mobile {
+        display: flex !important;
+        justify-content: center;
+        align-items: center;
+        padding: 1.2em;
+    }
+
+    /* Disable pistol */
+
+    #pistol {
+        display: none;
+    }
+
+    /* Footer section */
+
+    footer {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .footer,
+    .footer-bottom {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-bottom: 20px;
+    }
+
+    .footer>div {
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding-left: 0px !important;
+    }
+
+    .footer>div :nth-child(2) {
+        margin-left: 0px !important;
+    }
+
+
+    .footer-bottom>div {
+        padding-left: 7% !important;
+        padding-right: 7% !important;
+    }
+
+    /* Feedback bottom */
+
+    .feedback {
+        padding: 0px !important;
+        right: -10.5% !important;
+    }
+}
+
+@media (max-width: 375px) {
+    .feedback {
+        right: -12.3% !important;
+    }
+}
+
+@media (max-width: 320px) {
+    .feedback {
+        right: -13.7% !important;
+    }
+
+    /* Size down the ip-server */
+
+    .ip-server a,
+    .ip-server p {
+        padding: 4px 8px !important;
+    }
+}

@@ -1,0 +1,93 @@
+
+/* Setup grid container */
+
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+}
+
+/* Setup grid item */
+
+a .product {
+    text-decoration: none;
+    color: white;
+
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.product div:first-child {
+    transition: transform 0.2s ease-in-out;
+}
+
+.product:hover div:first-child {
+    transform: scale(0.98);
+}
+
+.product div:nth-child(2) p {
+    color: #b3b7bc;
+}
+
+/* Page selector section and button */
+
+.page-selecter {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    color: rgb(179 183 188);
+}
+
+.page-btn {
+    padding: 15px;
+    background-color: rgb(13 14 15);
+    cursor: pointer;
+}
+
+@media (max-width: 1440px) {
+
+    /* Remove padding for navbar and set padding to content-page */
+    .content-page {
+        padding-left: 15% !important;
+        padding-right: 15% !important;
+    }
+
+    .nav {
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+}
+
+@media (max-width: 1240px) {
+
+        /* Setup content-page padding to 6% */
+        .content-page {
+            padding-left: 5% !important;
+            padding-right: 5% !important;
+        }
+
+        /* Change padding of nav bar to 5% */
+    
+        .nav {
+            padding-left: 5% !important;
+            padding-right: 5% !important;
+        }
+}
+
+@media (max-width: 600px) {
+    /* Set grid box to 1 columns and set the size to minimum 0 and max size is 1fr */
+
+    .grid-box {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}

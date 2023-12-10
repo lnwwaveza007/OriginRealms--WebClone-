@@ -1,0 +1,115 @@
+/* Create grid columns for put the items in */
+
+.grid-box {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Settings css for grid items */
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.product-item {
+    width: 16rem;
+    height: 16rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.product div:first-child {
+    transition: transform 0.2s ease-in-out;
+}
+
+.product:hover div:first-child {
+    transform: scale(0.98);
+}
+
+@media (max-width: 1440px) {
+    /* Remove padding for navbar */
+    .nav {
+        padding-left: 0% !important;
+        padding-right: 0% !important;
+    }
+}
+
+@media (max-width: 1240px) {
+    /* Setup content-page padding to 6% */
+    .content-page {
+        padding-left: 6% !important;
+        padding-right: 6% !important;
+    }
+
+    /* Change size of grid item */
+
+    .product-item {
+        width: 12rem !important;
+        height: 12rem !important;
+    }
+
+    /* Change h2 font-size */
+
+    h2 {
+        font-size: 1.1rem !important;
+    }
+}
+
+@media (max-width: 1240px) {
+    /* Setup content-page padding to 5% */
+    .nav {
+        padding-left: 5% !important;
+        padding-right: 5% !important;
+    }
+
+    /* Change size of grid items down */
+    .product-item {
+        width: 18rem !important;
+        height: 18rem !important;
+    }
+}
+
+@media (max-width: 600px) {
+
+    /* Changed grid box from 4 columns to 2 columns  */
+
+    .grid-box {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Change size of grid items down */
+
+    .product-item {
+        width: 10rem !important;
+        height: 10rem !important;
+    }
+
+    /* Change h2 font-size */
+
+    h2 {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 320px) {
+
+    /* Change size of grid items down */
+
+    .product-item {
+        width: 8rem !important;
+        height: 8rem !important;
+    }
+
+    /* Change h2 font-size */
+
+    h2 {
+        font-size: 0.8rem !important;
+    }
+}
